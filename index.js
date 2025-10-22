@@ -1,20 +1,20 @@
-// COUNTER PROGRAM
+//CALCULATOR
 
-const decreaseBtn = document.getElementById("decreaseBtn");
-const resetBtn = document.getElementById("resetBtn");
-const incereaseBtn = document.getElementById("increaseBtn");
-const countLabel = document.getElementById ("countLabel");
-let count = 0;
+const display = document.getElementById("display");
 
-incereaseBtn.onclick = function(){
-    count++;
-    countLabel.textContent = count;
+function appendToDisplay(input){
+    display.value += input;
 }
-decreaseBtn.onclick = function(){
-    count--;
-    countLabel.textContent = count
+
+function clearDisplay(){
+    display.value = "";
 }
-resetBtn.onclick = function(){
-    count = 0;
-    countLabel.textContent = count;
+
+function calculate(){
+    try{
+        display.value = eval(display.value);
+    }
+    catch(error){
+        display.value ="Error"
+    }
 }
