@@ -18,5 +18,11 @@ button:hover{
     background-color: hsl(210, 100%, 60%);
 }
 button:active{
-    background-color: hsl(hue, saturation, 70%);
+    background-color: hsl(210, 100%, 70%);
+}
+input{
+    font-size: 2rem;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
 }
